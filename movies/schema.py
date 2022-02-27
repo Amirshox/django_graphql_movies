@@ -90,6 +90,21 @@ class UpdateActor(graphene.Mutation):
         return UpdateActor(ok=ok, actor=None)
 
 
+class DestroyActor(graphene.Mutation):
+    class Arguments:
+        id = graphene.Int(required=True)
+
+    ok = graphene.Boolean()
+    actor = graphene.Field(ActorType)
+
+    @staticmethod
+    def mutate(root, info, id):
+        ok = True
+        actor_instance = Actor.objects.get(id=id)
+        actor_instance.delete()
+        return DestroyActor(ok=ok)
+
+
 # Create mutations for movies
 class CreateMovie(graphene.Mutation):
     class Arguments:
@@ -146,11 +161,28 @@ class UpdateMovie(graphene.Mutation):
         return UpdateMovie(ok=ok, movie=None)
 
 
+class DestroyMovie(graphene.Mutation):
+    class Arguments:
+        id = graphene.Int(required=True)
+
+    ok = graphene.Boolean()
+    movie = graphene.Field(ActorType)
+
+    @staticmethod
+    def mutate(root, info, id):
+        ok = True
+        movie_instance = Movie.objects.get(id=id)
+        movie_instance.delete()
+        return DestroyActor(ok=ok)
+
+
 class Mutation(graphene.ObjectType):
     create_actor = CreateActor.Field()
     update_actor = UpdateActor.Field()
+    delete_actor = DestroyActor.Field()
     create_movie = CreateMovie.Field()
     update_movie = UpdateMovie.Field()
+    delete_movie = DestroyMovie.Field()
 
 
 schema = graphene.Schema(query=Query, mutation=Mutation)

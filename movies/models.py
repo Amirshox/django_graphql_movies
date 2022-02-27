@@ -8,7 +8,7 @@ class Actor(models.Model):
         return self.name
 
     class Meta:
-        ordering = ('name',)
+        ordering = ('-id',)
 
 
 class Movie(models.Model):
@@ -20,4 +20,4 @@ class Movie(models.Model):
         return self.title
 
     class Meta:
-        ordering = ('title',)
+        ordering = ('-id',)
