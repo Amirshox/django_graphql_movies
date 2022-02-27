@@ -1,0 +1,354 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-02-27T10:57:46.377Z",
+  "__export_source": "insomnia.desktop.app:v2021.7.2",
+  "resources": [
+    {
+      "_id": "req_d0971982d5cb455d8faa853ecf346141",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645959362238,
+      "created": 1645958672466,
+      "url": "http://127.0.0.1:8000/graphql/",
+      "name": "Delete Actor",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation deleteMutation {\\n  deleteMovie(id: 4) {\\n    movie {\\n\\t\\t\\tid\\n    }\\n  }\\n}\\n\",\"operationName\":\"deleteMutation\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_9061eef6e08e4b7d9e1149bfe3f98c6d"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1645958672466,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "parentId": null,
+      "modified": 1645940846981,
+      "created": 1645940846981,
+      "name": "GraphQL",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_4024805476d64adf908f044ab84e208c",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645958685418,
+      "created": 1645954889653,
+      "url": "http://127.0.0.1:8000/graphql/",
+      "name": "Update Movie",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation updateMutation {\\n  updateMovie(id: 2, input: {title: \\\"Test\\\", year: 2022, actors: [{id: 1}, {id: 2}]}) {\\n    movie {\\n\\t\\t\\tid\\n      title\\n\\t\\t\\tyear\\n\\t\\t\\tactors {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n    }\\n  }\\n}\\n\",\"operationName\":\"updateMutation\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e51d48d21ce443d8af157a7f776c025c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1645954889653,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c2035f1e11094870a9311b7333c4d218",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645954898953,
+      "created": 1645954414592,
+      "url": "http://127.0.0.1:8000/graphql/",
+      "name": "Update Actor",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation updateMutation {\\n  updateActor(id: 1, input: {name: \\\"Amirshox\\\"}) {\\n    actor {\\n\\t\\t\\tid\\n      name\\n    }\\n  }\\n}\\n\",\"operationName\":\"updateMutation\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_928922cf95a74d21a409d5ee5a299170"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1645954414592,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c48e7e7cb1ab4be2a289c9837ca69e3d",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645952450981,
+      "created": 1645952316151,
+      "url": "http://127.0.0.1:8000/graphql/",
+      "name": "Get Actors",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query {\\n\\tactors {\\n\\t\\tid\\n\\t\\tname\\n\\t}\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8e77c20ab3404911941131b39d622d6f"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1645952316151,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_474c9a00b3564d3bb97c860c4b8dbec4",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645954798559,
+      "created": 1645952307197,
+      "url": "http://127.0.0.1:8000/graphql/",
+      "name": "Get Actor",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query {\\n\\tactor (id: 1){\\n\\t\\tid\\n\\t\\tname\\n\\t}\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_3ab69dd9eaca4683b8e63bf9226be160"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1645952307197,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fcb2e6d7e66648aab1a75a1ddf75c180",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645954606280,
+      "created": 1645952211191,
+      "url": "http://127.0.0.1:8000/graphql/",
+      "name": "Get Movies",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query {\\n\\tmovies {\\n\\t\\tid\\n\\t\\ttitle\\n\\t\\tyear\\n\\t}\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_5a7680749ba04f389654016456b371ed"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1645952211191,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7bedce7dde4c4e11bb816c6e4c77139f",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645952250250,
+      "created": 1645952111632,
+      "url": "http://127.0.0.1:8000/graphql/",
+      "name": "Get Movie",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query {\\n\\tmovie (id: 1) {\\n\\t\\tid\\n\\t\\ttitle\\n\\t\\tyear\\n\\t\\tactors {\\n\\t\\t\\tname\\n\\t\\t}\\n\\t}\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_16336b7c5f2847faa5c2c94b90a59838"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1645952111632,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b0ae9de29e9442fca2f13ada735a6051",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645958332851,
+      "created": 1645951676613,
+      "url": "http://127.0.0.1:8000/graphql/",
+      "name": "Create Movie",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation createMutation {\\n  createMovie(input: {title: \\\"part 1\\\", year: 2022, actors: [{id: 34}, {id: 23}]}) {\\n    movie {\\n\\t\\t\\tid\\n      title\\n\\t\\t\\tyear\\n\\t\\t\\tactors {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n    }\\n  }\\n}\\n\",\"operationName\":\"createMutation\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_92ab69df3ad44aca8866d01c2ddeff26"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1645951676613,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9dd5235a73404ddba2bb6f15eaed9941",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645958340177,
+      "created": 1645940861383,
+      "url": "http://127.0.0.1:8000/graphql/",
+      "name": "Create Actor",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation createMutation {\\n  createActor(input: {name: \\\"Amirshox\\\"}) {\\n    actor {\\n      name\\n    }\\n  }\\n}\\n\",\"operationName\":\"createMutation\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c02c6817fdca47b8aa9c91e97da55554"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1645940861383,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_36c8e7c86cfbc2dad22fff8ae984a02f07287211",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645940846993,
+      "created": 1645940846993,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1645940846993,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_36c8e7c86cfbc2dad22fff8ae984a02f07287211",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645959362916,
+      "created": 1645940846998,
+      "name": "Default Jar",
+      "cookies": [
+        {
+          "key": "csrftoken",
+          "value": "PETkQpeWNmAzcwNG8odwFttWpwxIeP1XoQZPWxh03tZPirynp9Z3cnqmJUKx0Nde",
+          "expires": "2023-02-26T10:56:02.000Z",
+          "maxAge": 31449600,
+          "domain": "127.0.0.1",
+          "path": "/",
+          "extensions": [
+            "SameSite=Lax"
+          ],
+          "hostOnly": true,
+          "creation": "2022-02-27T05:48:19.347Z",
+          "lastAccessed": "2022-02-27T10:56:02.909Z",
+          "id": "3025239037826668"
+        }
+      ],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_1a6242e5cba24f4b91622e8f74fe3e5e",
+      "parentId": "wrk_aa0b28ae4dab4df5acaebc2e324ff415",
+      "modified": 1645940846984,
+      "created": 1645940846984,
+      "fileName": "GraphQL",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
